@@ -5,7 +5,7 @@ mult_2 = []
 mult_3 = []
 mult_2_3 = []
 for i in range(7):
-    vet_numa_aleatorio.append(randint(1, 50))    
+    vet_numa_aleatorio.append(randint(1, 100))    
     if vet_numa_aleatorio[i] % 2 == 0:
         mult_2.append(vet_numa_aleatorio[i])
     
@@ -17,11 +17,20 @@ for i in range(7):
         mult_2_3.append(vet_numa_aleatorio[i])
 
 if not mult_2_3:
-    print('lista vazia')
+    print('Nnehum múltiplo de 2 e de 3.')
 else:
-    print(mult_2_3)
-    
-print(mult_2)
-print(mult_3)
+    print(f'Os múltiplos de 2 e de 3: {mult_2_3}')
+
+
+if not mult_3:
+    print('Não há nenhum múltiplo de 2.')
+else:
+    print(f'Os múltiplos de 2: {mult_2}')
+
+
+if not mult_2:
+    print('Não há nenhum múltiplo de 3.')
+else:
+    print(f'Os múltiplos de 3: {mult_3}')
 
 input('Pressione Enter para fechar o programa...')
