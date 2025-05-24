@@ -4,7 +4,7 @@ todos_nomes = []
 medias = []
 soma_geral = 0
 
-for i in range(3):
+for i in range(15):
     nome = input(f'\nDigite o nome do {i + 1}° aluno: ')
     todos_nomes.append(nome)
     linha = []
@@ -13,14 +13,14 @@ for i in range(3):
     matriz.append(linha)
 
 
-for i in range(3): # Cálculo da média de cada um
+for i in range(15): # Cálculo da média de cada um
     soma = 0
     for j in range(5):
         soma += matriz[i][j]
     medias.append(soma / 5)
 
 
-for i in range(3): # Print da Média de cada um 
+for i in range(15): # Print da Média de cada um 
     if medias[i] >= 6:
         print(f'{todos_nomes[i]} media: {medias[i]:.2f} situação: Aprovado')
     
@@ -31,9 +31,9 @@ for i in range(3): # Print da Média de cada um
         print(f'{todos_nomes[i]} media: {medias[i]:.2f} situação: Reprovado')
 
 
-for i in range(3): # Média geral
+for i in range(15): # Média geral
     soma_geral += medias[i]
-media_geral = soma_geral / 3
+media_geral = soma_geral / 15
 
 print()
 print(f'A média da classe é de: {media_geral:.2f}') #  Média da classe
