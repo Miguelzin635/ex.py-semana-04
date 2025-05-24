@@ -1,10 +1,8 @@
-
 matriz = []
 todos_nomes = []
 
-
 medias = []
-
+soma_geral = 0
 
 for i in range(3):
     nome = input(f'\nDigite o nome do {i + 1}° aluno: ')
@@ -15,29 +13,37 @@ for i in range(3):
     matriz.append(linha)
 
 
-for i in range(3):
+for i in range(3): # Cálculo da média de cada um
     soma = 0
     for j in range(5):
         soma += matriz[i][j]
     medias.append(soma / 5)
 
 
-for i in range(3):
+for i in range(3): # Print da Média de cada um 
     if medias[i] >= 6:
-        print(f'{todos_nomes[i]} media: {medias[i]} situação: Aprovado')
+        print(f'{todos_nomes[i]} media: {medias[i]:.2f} situação: Aprovado')
     
     if 4 <= medias[i] < 6:
-        print(f'{todos_nomes[i]} media: {medias[i]} situação: Exame')
+        print(f'{todos_nomes[i]} media: {medias[i]:.2f} situação: Exame')
         
     if  medias[i] < 4:
-        print(f'{todos_nomes[i]} media: {medias[i]} situação: Reprovado')
+        print(f'{todos_nomes[i]} media: {medias[i]:.2f} situação: Reprovado')
+
+
+for i in range(3): # Média geral
+    soma_geral += medias[i]
+media_geral = soma_geral / 3
+
+print()
+print(f'A média da classe é de: {media_geral:.2f}') #  Média da classe
 print()
 
-for i in range(len(todos_nomes)):
+for i in range(len(todos_nomes)): # Print da matriz arrumada
     print(f'{todos_nomes[i]:7}', end= '')
     for j in range(len(matriz[i])):
-        print(f'{matriz[i][j]:7}', end= '')
+        print(f'{matriz[i][j]:7.2f}', end= '')
     print()
 
 
-
+print('\nPressione Enter para fechar o programa...')
