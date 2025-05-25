@@ -11,19 +11,18 @@ for i in range(5):
         linha.append(randint(1, 100 ))
     matriz.append(linha)
 
-
+posicao = []
 for i in range(5):
     for j in range(7):
         cont = 0
-        for k in range(1, matriz[i][j] + 1):    # Cálculo de maior primo
+        for k in range(1, matriz[i][j] + 1):    # Cálculo de primo
             if matriz[i][j] % k == 0:
                 cont += 1
         if cont == 2:
             primo.append(matriz[i][j])
-        
-for i in range(len(primo)):     # Maior primo
-    if primo[i] > maior_primo:
-        maior_primo = primo[i]
+            if matriz[i][j] > maior_primo:
+                maior_primo = matriz[i][j]
+                posicao = (i,j)
 
 
 if primo == []:
@@ -40,7 +39,7 @@ for i in range(5):
     print()
 
 
-print(f'O maior primo encontrado é: {maior_primo}')
+print(f'O maior primo encontrado é: {maior_primo} na posição {posicao}')
 print(f'O resutlado de todos os elementos multiplicado pelo maior primo encontrado ({maior_primo}) é: \n{multiplicados}')
 
     
