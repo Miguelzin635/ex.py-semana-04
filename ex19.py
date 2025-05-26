@@ -61,4 +61,4 @@ for j in range(5):
     print(f'Custo total do {j + 1}° armazém: R${custo_armazem:.2f}')      # CUSTO TOTAL DO ARMAZÉM
 
 print()
-print('Pression Enter para fechar o programa...')
+input('Pression Enter para fechar o programa...')
