@@ -38,5 +38,5 @@ for i in range(4):
         soma_ano += matriz[i][j]
 print(f'\nO total vendido pela loja no ano todo é: R${soma_ano:.2f}')
 
-print('\nPressione Enter para fechar o programa...')
+input('\nPressione Enter para fechar o programa...')
     
