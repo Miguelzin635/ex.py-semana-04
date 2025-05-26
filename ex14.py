@@ -46,4 +46,4 @@ for i in range(len(todos_nomes)): # Print da matriz arrumada
     print()
 
 
-print('\nPressione Enter para fechar o programa...')
+input('\nPressione Enter para fechar o programa...')
